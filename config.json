@@ -1,0 +1,37 @@
+{
+  "frame_size"    : 512,
+  "shift_size"    : 256,
+  "window_type"   : "hanning",
+  "sampling_rate" : 8000,
+
+  "pg_step"   : 1,
+  "num_layer" : 4,
+
+  "encoder_latent_sizes" : [16, 16, 32, 64],
+  "decoder_latent_sizes" : [16, 32, 64, 128],
+  "channel_sizes" : [128, 128, 128, 128],
+
+  "cutoff_frequency" : [1000, 2000, 3000],
+  "band_weight" : [1, 0, 0, 0],
+  "bool_trainables" : [true, true, true, true],
+
+  "batch_size"    : 128,
+  "epochs"        : 100000,
+  "learning_rate" : 0.0001,
+  "default_float" : "float32",
+
+  "train_source_path"       : "./dataset/The_little_Prince/8k_sampling/train",
+  "train_target_path"       : "./dataset/The_little_Prince/8k_sampling/train",
+
+  "valid_source_path"       : "./dataset/The_little_Prince/8k_sampling/validation",
+  "valid_target_path"       : "./dataset/The_little_Prince/8k_sampling/validation",
+
+  "test_source_path"        : "./dataset/The_little_Prince/8k_sampling/test",
+  "test_target_path"        : "./dataset/The_little_Prince/8k_sampling/test",
+
+  "load_checkpoint_name"    : "",
+  "save_checkpoint_name"    : "ProAE",
+  "save_checkpoint_period"  : 10,
+  "validation_test"         : true,
+  "plot_name"               : "ProAE"
+}
